@@ -1,0 +1,99 @@
+
+/* media queries */
+@media (min-width:200px) and (max-width: 360px) {
+    body{
+        width: 380px;
+    }
+    .olx-logo-image{
+        width: 2em;
+        height : 2em;
+    }
+}    
+ 
+@media (min-width:360px) and (max-width: 640px) {
+body{
+    width: 500px;
+} 
+.olx-logo-image{
+    width: 2em;
+    height : 2em;
+}
+
+}
+@media (min-width:640px) and (max-width: 768px) {
+    body{
+        width: 600px;
+    }
+  .olx-logo-image{
+        width: 2em;
+        height : 2em;
+    } 
+}
+
+@media (min-width: 768px) and (max-width:992px){
+    body{
+        width: 700px;
+    }
+  .olx-logo-image{
+        width: 2em;
+        height : 2em;
+    }
+}
+
+@media (min-width: 992px) and (max-width:1200px) {
+    body{
+        width: 900px;
+    }
+  .olx-logo-image{
+        width: 2em;
+        height : 2em;
+    }
+}
+
+.olx-logo-image{
+    width: 3em;
+    height : 3em;
+}
+.submit-ad-button{
+    background-color:  #ff8000;
+}
+.my-account-btn{
+    border-style: ridge;
+    border-color: #f2f2f2;
+}
+.email-field{
+    width: 280px;
+    border-top: 1px inset black;
+    border-left: 1px inset black; 
+}
+.password-field{
+    width: 280px;
+    border-top: 1px inset black;
+    border-left: 1px inset black; 
+}
+.login-button{
+    background-color: #3B5998;
+    margin-left: 60px;
+    width: 128.5px;
+    height: 37px;
+    padding: 5px;
+}
+.login-div{
+    background-color: #f2f2f2;
+    width: 280px;
+    margin-left: 135px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.register-option{
+    margin-left: 285px;
+    color: #3B5998;
+}
+.button-font {
+    font-family: 'Kanit', sans-serif;
+    color: #3B5998;
+    margin-left: 220px;
+    width: 128.5px;
+    height: 37px;
+    padding: 5px;
+}
