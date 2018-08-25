@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
-const typeObject = {
-    type: String,
-    require: true
-};
+
 const Schema = mongoose.Schema;
 const ProductSchema = new Schema({
     adTitle: {
@@ -18,7 +15,7 @@ const ProductSchema = new Schema({
         require: true
     },
     price: {
-        type: String,
+        type: Number,
         require: true
     },
     name: {
@@ -26,10 +23,14 @@ const ProductSchema = new Schema({
         require: true
     },
     number: {
-        type: String,
+        type: Number,
         require: true
     },
     province: {
+        type: String,
+        require: true
+    },
+    productImage: {
         type: String,
         require: true
     }
