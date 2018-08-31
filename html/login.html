@@ -41,14 +41,14 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active ml-2">
+                                <!-- <li class="nav-item active ml-2">
                                     <a class="nav-link my-account-btn" href="#">
                                         <b style="color:#3B5998;">
                                             <i class="fa fa-user"></i> My Account </b>
-                                    </a>
+                                    </a> -->
                                 </li>
                                 <li class="nav-item ml-2">
-                                    <a class="nav-link text-white submit-ad-button active" href="#">
+                                    <a class="nav-link text-white submit-ad-button active" href="./submitAd.html">
                                         <b>
                                             <i class="fa fa-plus"></i> &nbsp; Submit an Ad</b>
                                     </a>
@@ -77,7 +77,7 @@
                     <div class="card">
                         <br>
                         <br>
-                        <form>
+                        <form id="loginForm">
                             <div class="ml-5">
                                 Your Email &nbsp;
                                 <input type="email" required class="email-field" id="input">
@@ -93,13 +93,13 @@
                             </div>
                             <br>
                             <div class="login-div">
-                                <button class="btn login-button text-white">
+                                <button class="btn login-button text-white" type="submit">
                                     <h5>Log in</h5>
                                 </button>
                             </div>
                             <br>
                             <div>
-                                <a href="#" style="font-size: 12px;" class="register-option">New user? Register here</a>
+                                <a href="./signup.html" style="font-size: 12px;" class="register-option">New user? Register here</a>
                             </div>
                             <br>
                         </form>
@@ -113,9 +113,11 @@
                             <p class="text-dark" style="font-size: 14px;">Log in using your Facebook account</p>
                         </div>
                         <div class="">
-                            <button class="btn button-font"> <b>Facebook</b></button>
+                            <button class="btn button-font">
+                                <b>Facebook</b>
+                            </button>
                         </div>
-                        <br>                        
+                        <br>
                     </div>
                 </div>
                 <br>
@@ -144,7 +146,7 @@
 
 
 
-
+    <script src="../js/login.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
