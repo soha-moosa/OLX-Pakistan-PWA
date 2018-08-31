@@ -41,18 +41,26 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ml-auto">
+
                                 <li class="nav-item active ml-2">
-                                    <a class="nav-link my-account-btn" href="#">
-                                        <b style="color:#3B5998;">
-                                            <i class="fa fa-user"></i> My Account </b>
+                                    <a class="nav-link submit-ad-button btn text-white" href="../index.html">
+                                        <b>
+                                            View Ads </b>
                                     </a>
                                 </li>
-                                <li class="nav-item ml-2">
+
+                                <li class="nav-item active ml-2">
+                                    <a class="nav-link btn btn-dark" href="#">
+                                        <b>
+                                            Logout </b>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item ml-2">
                                     <a class="nav-link text-white submit-ad-button active" href="#">
                                         <b>
                                             <i class="fa fa-plus"></i> &nbsp; Submit an Ad</b>
                                     </a>
-                                </li>
+                                </li> -->
                         </div>
                     </div>
                 </nav>
@@ -63,74 +71,155 @@
     <!-- Submit Ad form -->
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-11">
 
                 <div class="container">
                     <div class="card">
                         <div class="card-header bg-white">
-                           <h5>Submit an Ad</h5> 
+                            <h5>Submit an Ad</h5>
                         </div>
                         <br>
                         <br>
-                        <form class="">
-                            <div class="input-group input-group-sm mb-3" style="margin-left: 2%;">
-                                Ad Title <small class="text-danger">*</small> &nbsp;
-                                <input type="text" required class="ad-title form-control" id="input">
-                            </div>
-                            <br>
-                            <div style="margin-left: 65px;">
-                                Password <small class="text-danger">*</small> &nbsp;
-                                <input type="password" required class="password-field" placeholder="Enter your password" id="password">
-                            </div>
-                            <br>
-                            <div style="margin-left: 2%;">
-                               Repeat password <small class="text-danger">*</small> &nbsp;
-                                <input type="password" required class="password-field" id="repeat_password" placeholder="Repeat your password">
-                            </div>
-                            <br>
-                            <div class="login-div">
-                                <button class="btn login-button text-white">
-                                    <h5>Create</h5>
-                                </button>
-                            </div>
-                            <br>
-                        </form>
+                        <div class="card-body">
+                            <form id="submitAdForm">
+
+                                <!-- Ad Title -->
+
+                                <div class="div1">
+                                    <b>Ad Title</b>
+                                    <small class="text-danger">*</small> &nbsp;
+                                    <input type="text" required class="input1" id="ad-title">
+                                </div>
+                                <br>
+
+                                <!-- Category -->
+                                <div class="div1">
+                                    <label for="category">
+                                        <span>
+                                            <b>Category</b>
+                                        </span>
+                                        <span>
+                                            <small class="text-danger">*</small> &nbsp;
+                                        </span>
+                                    </label>
+                                    <select class="form-control" style="width:470px; margin-left:11%;" id="category">
+                                        <option value=""> </option>
+                                        <option value="Property-for-sale">Property for Sale</option>
+                                        <option value="Property-for-Rent">Property for Rent</option>
+                                        <option value="Animals">Animals</option>
+                                        <option value="Books-Sports-Hobbies">Books, Sports & Hobbies</option>
+                                        <option value="Electronics-Home-Appliances">Electronics & Home Appliances</option>
+                                        <option value="Mobiles">Mobiles</option>
+                                        <option value="Jobs">Jobs</option>
+                                        <option value="Services">Services</option>
+                                        <option value="Business-Industrial-Agriculture">Business Industrial & Agriculture</option>
+                                        <option value="Furniture-Home-Decor">Furniture & Home Decor</option>
+                                        <option value="Kids">Kids</option>
+                                        <option value="Fashion">Fashion</option>
+                                        <option value="Vehicles">Vehicles</option>
+                                        <option value="Bikes">Bikes</option>
+                                    </select>
+                                </div>
+                                <hr>
+                                <br>
+                                <div class="div1">
+                                    <label for="price">
+                                        <span>
+                                            <b>Price</b>
+                                        </span>
+                                        <span>
+                                            <small class="text-danger">*</small> &nbsp;
+                                        </span>
+                                    </label>
+                                    <input type="text" required class="input1 ml-4" id="price">
+                                </div>
+                                <br>
+                                <div class="div1">
+                                    <div>
+                                        <label for="ad-description">
+                                            <span>
+                                                <b>Ad Description</b>
+                                            </span>
+                                            <span>
+                                                <small class="text-danger">*</small> &nbsp;
+                                            </span>
+
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <textarea id="ad-description" style="margin-left: 11%;" cols="80" rows="1" class="text-area" maxlength="100" placeholder=" Include the brand, model, age and any included accessories."> 
+                                    </textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div>
+                                    <h5>Your contact details</h5>
+                                </div>
+                                <hr>
+                                <br>
+                                <div class="div1">
+                                    <label for="name">
+                                        <span>
+                                            <b>Name</b>
+                                        </span>
+                                        <span>
+                                            <small class="text-danger">*</small> &nbsp;
+                                        </span>
+                                    </label>
+                                    <input type="text" required class="input1 ml-3" id="name">
+                                </div>
+                                <br>
+                                <div class="div2">
+                                    <label for="number">
+                                        <span>
+                                            <b>Phone number</b>
+                                        </span>
+                                        <span>
+                                            <small class="text-danger">*</small> &nbsp;
+                                        </span>
+                                    </label>
+                                    <input type="text" required class="ml-3 phoneNumber" id="phone-number">
+                                </div>
+                                <hr>
+                                <br>
+                                <div class="div3">
+                                    <label for="province">
+                                        <span>
+                                            <b>Province</b>
+                                        </span>
+                                        <span>
+                                            <small class="text-danger">*</small> &nbsp;
+                                        </span>
+                                    </label>
+                                    <input type="text" required class="province" id="province">
+                                </div>
+                                <hr>
+                                <button type="submit" class="btn text-white submit-ad-button" style="margin-left: 45%; width: 140px;">Submit</button>
+
+
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <br>
+            </div>
 
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
 
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id="productMessage" class="modal-body">
 
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        document.getElementById('input').onfocus = function () {
-            document.getElementById('input').style = "border : 5px solid #f2f2f2;"
-        }
-        document.getElementById('input').onblur = function () {
-            document.getElementById('input').style = " border-top: 1px inset black; border-left: 1px inset black; "
-        }
-
-        document.getElementById('password').onfocus = function () {
-            document.getElementById('password').style = "border : 5px solid #f2f2f2;"
-        }
-        document.getElementById('password').onblur = function () {
-            document.getElementById('password').style = " border-top: 1px inset black; border-left: 1px inset black; "
-        }
-        
-        document.getElementById('repeat_password').onfocus = function () {
-            document.getElementById('repeat_password').style = "border : 5px solid #f2f2f2;"
-        }
-        document.getElementById('repeat_password').onblur = function () {
-            document.getElementById('repeat_password').style = " border-top: 1px inset black; border-left: 1px inset black; "
-        }
-    </script>
-
-
-
-
+    <script src="../js/submitAd.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
