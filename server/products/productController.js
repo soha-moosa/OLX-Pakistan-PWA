@@ -1,17 +1,17 @@
 const ProductModal = require('./productModel');
 
 const addProduct = (req, res) => {
-    console.log(req.file);
+    console.log(req.body.bodyData);
     const product = new ProductModal({    //req.body
 
-        adTitle: req.body.adTitle,
-        category: req.body.category,
-        adDescription: req.body.adDescription,
-        price: req.body.price,
-        name: req.body.name,
-        number: req.body.number,
-        province: req.body.province,
-        productImage: req.file.path
+        adTitle: req.body.bodyData.adTitle,
+        category: req.body.bodyData.category,
+        adDescription: req.body.bodyData.adDescription,
+        price: req.body.bodyData.price,
+        name: req.body.bodyData.name,
+        number: req.body.bodyData.number,
+        province: req.body.bodyData.province
+        // productImage: req.file.path
     });
 
     product.save()
@@ -73,8 +73,9 @@ const searchProduct = (req, res) => {
     })
 }
 const searchByCategory = (req, res) => {
+    console.log(req.body.bodyData.category);
     ProductModal.find({
-        'category': req.body.category
+        'category': req.body.bodyData.category
     }).then(docs => {
         const response = { 
             count: docs.length,
@@ -88,7 +89,7 @@ const searchByCategory = (req, res) => {
                     name: doc.name,
                     number: doc.number,
                     province: doc.province,
-                    productImage: doc.productImage,                    
+                    // productImage: doc.productImage,                    
                     request: {
                         type: 'GET',
                         url: 'http://localhost:8080/products/search/' + doc._id
@@ -101,8 +102,9 @@ const searchByCategory = (req, res) => {
         ));
     }
 const searchByName = (req, res) => {
+    console.log(req.body.bodyData.adTitle);
     ProductModal.find({
-        'adTitle': req.body.adTitle
+        'adTitle': req.body.bodyData.adTitle
     }).then(docs => {
         const response = { 
             count: docs.length,
@@ -116,7 +118,7 @@ const searchByName = (req, res) => {
                     name: doc.name,
                     number: doc.number,
                     province: doc.province,
-                    productImage: doc.productImage,                    
+                    // productImage: doc.productImage,                    
                     request: {
                         type: 'GET',
                         url: 'http://localhost:8080/products/search/' + doc._id
