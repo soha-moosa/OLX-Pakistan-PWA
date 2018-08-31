@@ -62,36 +62,96 @@ body{
     border-color: #f2f2f2;
 }
 
- .ad-title{
-     width:10% !important;
+.search-btn{
+    background-color: #2e5cb8;
+    width: 145px !important;
 }
-/*.password-field{
-    width: 280px;
-    border-top: 1px inset black;
-    border-left: 1px inset black; 
+.search-input{
+   width: 897px !important;
 }
-.login-button{
-    background-color: #3B5998;
-    margin-left: 60px;
-    width: 128.5px;
-    height: 37px;
-    padding: 5px;
+.search-div{
+   background-color: #e0e0eb;
+   /* opacity: 0.2; */
 }
-.login-div{
-    width: 280px;
-    margin-left: 75px;
-    padding: 20px;
-    border-radius: 5px;
+.building-icon{
+   color: purple;
 }
-.register-option{
-    margin-left: 285px;
-    color: #3B5998;
+.Second-building-icon{
+   color: red;
 }
-.button-font {
-    font-family: 'Kanit', sans-serif;
-    color: #3B5998;
-    margin-left: 220px;
-    width: 128.5px;
-    height: 37px;
-    padding: 5px;
-} */
+.car-icon{
+   color: #2e5cb8;
+}
+.bike-icon{
+   color: #ff8000;
+}
+.electronic-icon{
+color: greenyellow;
+}
+.mobile-icon{
+   color: purple;
+}
+.briefcase-icon{
+   color: green;
+}
+.wrench-icon{
+color: rgb(23, 154, 206);
+}
+.industry-icon{
+   color: maroon;
+}
+.couch-icon{
+   color: rgb(82, 206, 165); 
+}
+.animal-icon{
+   color: #008080;
+}
+.books-icon{
+   color:  #00b8e6;
+}
+.fashion-icon{
+   color: #cc0088;
+}
+.kids-icon{
+   color: #ffccee;
+}
+
+
+.div1{
+    margin-left: 160px;
+}
+
+.div2{
+    margin-left: 95px;
+}
+.div3{
+    margin-left: 140px;
+}
+.input1{
+     width:60% !important;
+     border: 1px solid #d9d9d9;
+     border-radius: 3px;
+    
+}
+.category-button{
+    background-color: white;
+    border: 1px solid #d9d9d9;
+}
+.text-area{
+    height: 140px;
+    width: 400px;
+    resize: none;
+    overflow-y: hidden;
+}
+.phoneNumber {
+    border: 1px solid #d9d9d9; 
+    border-radius: 3px;
+    width:470px; 
+    margin-left:11%;
+}
+.province {
+    border: 1px solid #d9d9d9; 
+    border-radius: 3px;
+    width:470px; 
+    margin-left: 20px; 
+}
