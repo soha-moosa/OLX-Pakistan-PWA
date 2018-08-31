@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <title>Free Classified Ads in Pakistan</title>
+    <!-- links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/signup.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <br>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+
+
+                <!-- main header navbar -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container">
+                        <a href="#" class="olx-link">
+                            <h5 class="text-dark">
+                                <img src="../images/olx-logo.png" alt="olx-logo" class="olx-logo-image mr-3"> Pakistan's Largest Marketplace</h5>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="bg-dark navbar-toggler-icon ml-4"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active ml-2">
+                                    <a class="nav-link my-account-btn" href="./login.html">
+                                        <b style="color:#3B5998;">
+                                            <i class="fa fa-user"></i> My Account </b>
+                                    </a>
+                                </li>
+                                <li class="nav-item ml-2">
+                                    <a class="nav-link text-white submit-ad-button active" href="./submitAd.html">
+                                        <b>
+                                            <i class="fa fa-plus"></i> &nbsp; Submit an Ad</b>
+                                    </a>
+                                </li>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h6 class="text-muted ml-3">Create an account</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+
+                <div class="container">
+                    <div class="card">
+                        <br>
+                        <br>
+                        <form id="signupForm">
+                            <div style="margin-left: 95px;">
+                                Email
+                                <small class="text-danger">*</small> &nbsp;
+                                <input type="email" required class="email-field" placeholder="Enter your email" id="input">
+
+                            </div>
+                            <br>
+                            <div style="margin-left: 65px;">
+                                Password
+                                <small class="text-danger">*</small> &nbsp;
+                                <input type="password" required class="password-field" placeholder="Enter your password" id="password">
+                            </div>
+                            <br>
+                            <div style="margin-left: 2%;">
+                                Repeat password
+                                <small class="text-danger">*</small> &nbsp;
+                                <input type="password" required class="password-field" id="repeat_password" placeholder="Repeat your password">
+                            </div>
+                            <br>
+                            <div class="login-div">
+                                <button class="btn login-button text-white" type="submit">
+                                    <h5>Create</h5>
+                                </button>
+                            </div>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+                <br>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('input').onfocus = function () {
+            document.getElementById('input').style = "border : 5px solid #f2f2f2;"
+        }
+        document.getElementById('input').onblur = function () {
+            document.getElementById('input').style = " border-top: 1px inset black; border-left: 1px inset black; "
+        }
+
+        document.getElementById('password').onfocus = function () {
+            document.getElementById('password').style = "border : 5px solid #f2f2f2;"
+        }
+        document.getElementById('password').onblur = function () {
+            document.getElementById('password').style = " border-top: 1px inset black; border-left: 1px inset black; "
+        }
+
+        document.getElementById('repeat_password').onfocus = function () {
+            document.getElementById('repeat_password').style = "border : 5px solid #f2f2f2;"
+        }
+        document.getElementById('repeat_password').onblur = function () {
+            document.getElementById('repeat_password').style = " border-top: 1px inset black; border-left: 1px inset black; "
+        }
+    </script>
+
+
+
+    <script src="../js/signup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
