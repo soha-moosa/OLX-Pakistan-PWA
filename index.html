@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <title>Free Classified Ads in Pakistan</title>
+    <!-- links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+</head>
+
+<body onload="getAllProducts()">
+
+
+    <br>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+
+
+                <!-- main header navbar -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container">
+                        <a href="#" class="olx-link">
+                            <h5 class="text-dark">
+                                <img src="./images/olx-logo.png" alt="olx-logo" class="olx-logo-image mr-3"> Pakistan's Largest Marketplace</h5>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="bg-dark navbar-toggler-icon ml-4"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active ml-2">
+                                    <a class="nav-link text-primary my-account-btn" href="./html/login.html">
+                                        <b style="color:#3B5998;">
+                                            <i class="fa fa-user"></i> My Account </b>
+                                    </a>
+                                </li>
+                                <li class="nav-item ml-2">
+                                    <a class="nav-link text-white submit-ad-button active" href="./html/submitAd.html">
+                                        <b>
+                                            <i class="fa fa-plus"></i> &nbsp; Submit an Ad</b>
+                                    </a>
+                                </li>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- search bar -->
+
+                <div class="container ml-3 mr-3">
+                    <div class="container p-2 search-div">
+                        <form id="searchForm">
+                            <div class="form-inline">
+                                <input onchange="searchProductOfThisName();" type="text" placeholder="Search Ads" id="SearchName" class="form-control search-input">
+                                <button class="ml-2 form-control btn btn-block btn-outline-white text-white search-btn" type="submit">
+                                    <i class="fa fa-search"></i>Search </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <!-- first row -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col" style="column-count: 1;">
+                                <ul class="list-unstyled">
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" class="text-dark" onclick="searchProductOfThisCategory('Property-for-sale');">
+                                            <i class="fas fa-building ml-2 building-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;"> Property
+                                                <br> for Sale </p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Property-for-Rent');">
+                                            <i class="fa fa-building ml-2 Second-building-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Property
+                                                <br> for Rent</p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Animals');">
+                                            <i class="fas fa-crow animal-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Animals</p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Books-Sports-Hobbies');">
+                                            <i class="fa fa-swatchbook books-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Books, Sports
+                                                <br> & Hobbies</p>
+                                        </a>
+
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Electronics-Home-Appliances');">
+                                            <i class="fa fa-laptop electronic-icon ml-2" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark text-justify" style="font-size: 13px;"> Electronics &
+                                                <br> Home Appliances </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- second row -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col" style="column-count: 1;">
+                                <ul class="list-unstyled">
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Mobiles');">
+                                            <i class="fa fa-mobile ml-2 mobile-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Mobiles</p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Jobs');">
+                                            <i class="fa fa-briefcase briefcase-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Jobs</p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Services');">
+                                            <i class="fa fa-wrench ml-2 wrench-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Services</p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 40px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Business-Industrial-Agriculture');">
+                                            <i class="fa fa-industry industry-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Business
+                                                <br> Industrial &
+                                                <br> Agriculture </p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Furniture-Home-Decor');">
+                                            <i class="fa fa-couch couch-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Furniture &
+                                                <br> Home Decor </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- third row -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col" style="column-count: 1;">
+                                <ul class="list-unstyled">
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Kids');">
+                                            <i class="fa fa-shopping-cart kids-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark ml-2" style="font-size: 13px;">Kids</p>
+                                        </a>
+
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Fashion');">
+                                            <i class="fa fa-tshirt fashion-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Fashion</p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Vehicles');">
+                                            <i class="fa fa-car car-icon ml-1" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Vehicles</p>
+                                        </a>
+                                    </li>
+                                    <li style="margin-left: 30px;">
+                                        <a href="#" onclick="searchProductOfThisCategory('Bikes');">
+                                            <i class="fa fa-motorcycle bike-icon" style="font-size:35px;"></i>
+                                            <br>
+                                            <p class="text-dark" style="font-size: 13px;">Bikes</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <span>
+            <h4>Ads with Photos</h4>
+        </span>
+    </div>
+    <hr>
+
+    <section class="container">
+        <div id="productShowCase" class="row">
+
+        </div>
+    </section>
+
+
+
+
+
+    <script src="./js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(() => console.log('Service worker Registered'))
+                .catch(() => console.log('some error occurred'));
+        }
+    </script> -->
+</body>
+
+</html>
+
+
+
+
+<!-- height: 180px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1658a27335b%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1658a27335b%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E -->
