@@ -1,7 +1,7 @@
 const ProductModal = require('./productModel');
 
 const addProduct = (req, res) => {
-    console.log(req.body.bodyData);
+    // console.log(req.body.bodyData);
     const product = new ProductModal({    //req.body
 
         adTitle: req.body.bodyData.adTitle,
@@ -10,7 +10,8 @@ const addProduct = (req, res) => {
         price: req.body.bodyData.price,
         name: req.body.bodyData.name,
         number: req.body.bodyData.number,
-        province: req.body.bodyData.province
+        province: req.body.bodyData.province,
+        imageURL: req.body.bodyData.imageURL
         // productImage: req.file.path
     });
 
@@ -28,6 +29,8 @@ const getAllProduct = (req, res) => {
         const response = { 
             count: docs.length,
             allProducts: docs.map(doc => {
+                // console.log(doc);
+                
                 return {
                     adTitle: doc.adTitle,
                     category: doc.category,
@@ -37,7 +40,8 @@ const getAllProduct = (req, res) => {
                     name: doc.name,
                     number: doc.number,
                     province: doc.province,
-                    productImage: 'http://localhost:8080/' + doc.productImage,                    
+                    imageURL: doc.imageURL,
+                    // productImage: 'http://localhost:8080/' + doc.productImage,                    
                     request: {
                         type: 'GET',
                         url: 'http://localhost:8080/products/search/' + doc._id
@@ -45,6 +49,7 @@ const getAllProduct = (req, res) => {
                 }
             })
         }
+        // console.log(response);
         res.send(response);
     });
 };
@@ -62,7 +67,7 @@ const searchProduct = (req, res) => {
             name: doc.name,
             number: doc.number,
             province: doc.province,
-            productImage: doc.productImage,                    
+            imageURL: doc.imageURL,                    
             request: {
                 type: 'GET',
                 url: 'http://localhost:8080/products/search/' + doc._id
@@ -89,6 +94,7 @@ const searchByCategory = (req, res) => {
                     name: doc.name,
                     number: doc.number,
                     province: doc.province,
+                    imageURL: doc.imageURL,
                     // productImage: doc.productImage,                    
                     request: {
                         type: 'GET',
@@ -102,7 +108,7 @@ const searchByCategory = (req, res) => {
         ));
     }
 const searchByName = (req, res) => {
-    console.log(req.body.bodyData.adTitle);
+    // console.log(req.body.bodyData.adTitle);
     ProductModal.find({
         'adTitle': req.body.bodyData.adTitle
     }).then(docs => {
@@ -118,6 +124,7 @@ const searchByName = (req, res) => {
                     name: doc.name,
                     number: doc.number,
                     province: doc.province,
+                    imageURL: doc.imageURL,
                     // productImage: doc.productImage,                    
                     request: {
                         type: 'GET',

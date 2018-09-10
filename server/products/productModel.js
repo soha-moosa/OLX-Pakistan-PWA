@@ -29,6 +29,9 @@ const ProductSchema = new Schema({
     province: {
         type: String,
         required: true
+    },
+    imageURL:{
+        type: String
     }
     // productImage: {
     //     type: String,
