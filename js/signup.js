@@ -20,7 +20,7 @@ document.getElementById("signupForm").addEventListener("submit", (event) => {
     }).then(res => {
         return res.json()
     }).then(user =>{
-        window.location.href = "../html/index.html";
+        window.location.href = "../index.html";
     }).catch(error => {
         console.log(error);
     })

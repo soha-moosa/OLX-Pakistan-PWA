@@ -2,8 +2,8 @@
 document.getElementById("loginForm").addEventListener("submit", (event) => {
     const email = document.getElementById("input").value;
     const password = document.getElementById("password").value;
-    console.log(email);
-    console.log(password);
+    // console.log(email);
+    // console.log(password);
 
     event.preventDefault();
     fetch("http://localhost:8080/users/login", {
@@ -22,7 +22,8 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
     }).then(res => {
         return res.json()
     }).then(user => {
-        window.location.href = "../html/index.html";
+        localStorage.setItem('userId', user._id);        
+        window.location.href = "../index.html";
     }).catch(error => {
         console.log(error);
     });

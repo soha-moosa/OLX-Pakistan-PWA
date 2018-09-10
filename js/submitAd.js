@@ -29,7 +29,8 @@ document.getElementById("submitAdForm").addEventListener("submit", (event) => {
                 price,
                 name,
                 number,
-                province
+                province,
+                imageURL
             }
         }),
         headers: {
@@ -46,3 +47,21 @@ document.getElementById("submitAdForm").addEventListener("submit", (event) => {
     });
 })
 
+
+
+let imageURL = "";
+$(document).ready(function () {
+    $("#inputFileToLoad").change(function () {
+        let fileSelected = document.getElementById("inputFileToLoad").files;
+        if (fileSelected.length > 0) {
+            let fileToLoad = fileSelected[0];
+            let fileReader = new FileReader();
+            fileReader.onload = function (fileLoadedEvent) {
+                var base64value = fileLoadedEvent.target.result;
+                console.log(base64value);
+                imageURL = base64value;
+            };
+            fileReader.readAsDataURL(fileToLoad);
+        }
+    });
+});
