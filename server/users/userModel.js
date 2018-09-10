@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const UserSchema= new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     id: mongoose.Schema.Types.ObjectId,
     email: {
         type: String,
@@ -12,8 +12,11 @@ const UserSchema= new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        
+
+    },
+    favoriteProduct: {
+        type: Array
     }
 });
 
-module.exports = mongoose.model('User',UserSchema) //modal name and modal schema
+module.exports = mongoose.model('User', UserSchema) //modal name and modal schema

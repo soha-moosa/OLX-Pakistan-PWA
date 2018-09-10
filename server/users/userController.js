@@ -1,7 +1,7 @@
 const User = require('./userModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
+const Product = require('../products/productModel');
 const signup = (req, res, next) => {
     User.findOne({
         "email": req.body.bodyData.email
@@ -68,7 +68,8 @@ const login = (req, res, next) => {
                         })
                     return res.status(200).json({
                         message: "Logged in successfully",
-                        token: token
+                        token: token,
+                        _id: user._id
                     });
                 }
                 return res.status(401).json({
@@ -99,8 +100,58 @@ const deleteUser = (req, res, next) => {
         });
     });
 }
+// server chalao
+const addToFavoriteItemList = (req, res) => {
+    const { productId, id } = req.body.bodyData;
+    console.log(productId, id);
+
+    Product.findOne({
+        '_id': productId
+    })
+        .then((product) => {
+            // res.send({ status: true });
+            User.findOneAndUpdate({ '_id': id }, { $push: { favoriteProduct: product } }, { new: true }).then((response) => {
+                console.log("__FINDEBYIDREPONSE__", response);
+                res.send({ status: true, product });
+            })
+        })
+        .catch((error) => {
+            console.log(error);
+            res.send({
+                status: false,
+                error
+            })
+        })
+}
+
+
+const getAllFavoriteItemList = (req, res) => {
+    const id = req.body.bodyData.id;
+    console.log(id);
+    User.findOne({
+        "_id": id
+    })
+        .then((response) => {
+            res.send({ status: true, favoriteProduct: response.favoriteProduct });
+        })
+        .catch((error) => {
+            console.log(error);
+            res.send({
+                status: false,
+                error
+            })
+        })
+
+}
+
+
+
+
+
 module.exports = {
     signup,
     login,
-    deleteUser
+    deleteUser,
+    addToFavoriteItemList,
+    getAllFavoriteItemList
 }
