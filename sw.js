@@ -10,6 +10,7 @@ self.addEventListener('install', function(event) {
             './css/login.css',
             './css/signup.css',
             './css/submitAd.css',
+            './html/favProducts.html',
             './html/login.html',
             './html/signup.html',
             './html/submitAd.html',
