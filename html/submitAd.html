@@ -81,7 +81,7 @@
                         <br>
                         <br>
                         <div class="card-body">
-                            <form id="submitAdForm">
+                            <form method="post" enctype="multipart/form-data" id="submitAdForm">
 
                                 <!-- Ad Title -->
 
@@ -123,6 +123,24 @@
                                 <hr>
                                 <br>
                                 <div class="div1">
+                                    <label for="uploadPhotos">
+                                        <span>
+                                            <b>Upload Photos</b>
+                                        </span>
+                                    </label>
+                                    <div class="custom-file mb-3">
+                                        <input type="file" name="filename" class="custom-file-input file-width" id="inputFileToLoad">
+                                        <label for="file" class="custom-file-label">Choose File</label>
+                                    </div>
+                                    <br>
+                                    <!-- <input type="submit" value="Submit" class="btn btn-primary" style="margin-left: 30%;" id="BaseToImage"> -->
+
+                                    <!-- <input type="file" name="filename" class="btn form-control" id="price"> -->
+                                    <!-- <input type="submit" value="upload" style="margin-left: 3%;" class="btn text-white submit-ad-button"> -->
+                                </div>
+                                <br>
+
+                                <div class="div1">
                                     <label for="price">
                                         <span>
                                             <b>Price</b>
@@ -147,7 +165,7 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <textarea id="ad-description" style="margin-left: 11%;" cols="80" rows="1" class="text-area" maxlength="100" placeholder=" Include the brand, model, age and any included accessories."> 
+                                        <textarea id="ad-description" style="margin-left: 11%;" cols="80" rows="1" class="text-area" maxlength="1000000" placeholder=" Include the brand, model, age and any included accessories."> 
                                     </textarea>
                                     </div>
                                 </div>
@@ -219,13 +237,14 @@
         </div>
     </div>
 
-    <script src="../js/submitAd.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
+    <script src="../js/submitAd.js"></script>
+
 </body>
 
 </html>
