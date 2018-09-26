@@ -110,7 +110,7 @@ const addTofavoriteProduct = (productId, userId) => {
         });
 
 }
-// add fav k button p click krny p wo page khol rha hy?nahi nahi! sbr dikhata hun! 
+
 function viewDetails(_id) {
     console.log('hello');
     fetch(`http://localhost:8080/products/searchById/${_id}`)

@@ -100,7 +100,7 @@ const deleteUser = (req, res, next) => {
         });
     });
 }
-// server chalao
+
 const addToFavoriteItemList = (req, res) => {
     const { productId, id } = req.body.bodyData;
     console.log(productId, id);
